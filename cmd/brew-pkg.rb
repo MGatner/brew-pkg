@@ -1,25 +1,48 @@
 #:Usage: brew pkg [options] formula
 #:
-#:Build an OS X installer package from a formula. It must be already
+#:Build a macOS installer package from a formula. It must be already
 #:installed; 'brew pkg' doesn't handle this for you automatically. The
 #:'--identifier-prefix' option is strongly recommended in order to follow
 #:the conventions of OS X installer packages (Default 'org.homebrew').
 #:
 #:Options:
-#:  --identifier-prefix     set a custom identifier prefix to be 
-#:                          prepended to the built package's identifier
-#:                          default package identifier is 'org.homebrew'
-#:  --with-deps             include all the package's dependencies in the build
-#:  --without-kegs          exclude contents at /usr/local/Cellar/packagename
-#:  --without-opt           exclude the link in /usr/local/opt
-#:  --install-location      custom install location for package
-#:  --custom-ownership      custom ownership for package
-#:  --preinstall-script     custom preinstall script file
-#:  --postinstall-script    custom postinstall script file
-#:  --scripts               custom preinstall and postinstall scripts folder
-#:  --pkgvers               set the version string in the resulting .pkg file
-#:  -d, --debug             print extra debug information
-#:  -h, --help              Show this message.
+#:  --identifier-prefix
+#:		Set a custom identifier prefix to be prepended to the built
+#:		package's identifier (default: 'org.homebrew').
+#:
+#:  --with-deps
+#:		Include all the package's dependencies in the build.
+#:
+#:  --without-kegs
+#:		Exclude contents at /usr/local/Cellar/packagename.
+#:
+#:  --without-opt
+#:		Exclude the link in /usr/local/opt.
+#:
+#:  --install-location
+#:		Custom install location for package.
+#:
+#:  --custom-ownership
+#:		Custom ownership for package.
+#:
+#:  --preinstall-script
+#:		Custom preinstall script file.
+#:
+#:  --postinstall-script
+#:		Custom postinstall script file.
+#:
+#:  --scripts
+#:		Custom preinstall and postinstall scripts folder.
+#:
+#:  --pkgvers
+#:		Set the version string in the resulting .pkg file.
+#:
+#:  -d, --debug
+#:		Print extra debug information.
+#:
+#:  -h, --help
+#:		Show this message.
+#:
 
 require 'formula'
 require 'formulary'
@@ -44,7 +67,7 @@ module Homebrew
       usage_banner <<~EOS
       `pkg` [<options>] <formula>
 
-      Build an OS X installer package from a formula. It must be already
+      Build a macOS installer package from a formula. It must be already
       installed; 'brew pkg' doesn't handle this for you automatically. The
       '--identifier-prefix' option is strongly recommended in order to follow
       the conventions of OS X installer packages (Default 'org.homebrew').
