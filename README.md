@@ -32,7 +32,7 @@ If you need to exclude it, specify the option `--without-kegs`.
 
 ## Installing it
 
-`brew-pkg` is available from this [formulae tap](https://github.com/mgatner/brew-pkg). Add the tap:
+`brew-pkg` is available from this [formulae tap](https://github.com/mgatner/homebrew-pkg). Add the tap:
 
 `brew tap mgatner/pkg`
 
@@ -54,7 +54,7 @@ For more information refer to `man pkgbuild` which explains:
 
 ## License
 
-brew-pkg is [MIT-licensed](https://github.com/mgatner/brew-pkg/blob/develop/LICENSE.md).
+brew-pkg is [MIT-licensed](https://github.com/mgatner/homebrew-pkg/blob/develop/LICENSE.md).
 
 This project began with [Tim Sutton](https://github.com/timsutton/brew-pkg) then was taken over by
 [Daniel Bair](https://github.com/danielbair/homebrew-pkg) before landing here. Original repos may
