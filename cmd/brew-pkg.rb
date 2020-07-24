@@ -3,7 +3,7 @@
 #:Build a macOS installer package from a formula. It must be already
 #:installed; 'brew pkg' doesn't handle this for you automatically. The
 #:'--identifier-prefix' option is strongly recommended in order to follow
-#:the conventions of OS X installer packages (Default 'org.homebrew').
+#:the conventions of macOS installer packages (Default 'org.homebrew').
 #:
 #:Options:
 #:  --identifier-prefix
@@ -70,32 +70,32 @@ module Homebrew
       Build a macOS installer package from a formula. It must be already
       installed; 'brew pkg' doesn't handle this for you automatically. The
       '--identifier-prefix' option is strongly recommended in order to follow
-      the conventions of OS X installer packages (Default 'org.homebrew').
+      the conventions of macOS installer packages (Default 'org.homebrew').
       EOS
       flag "--identifier-prefix=",
-             description: "set a custom identifier prefix to be"\
+             description: "Set a custom identifier prefix to be"\
                           "prepended to the built package's identifier"\
                           "default package identifier is 'org.homebrew'"
       switch "--with-deps",
-             description: "include all the package's dependencies in the build"
+             description: "Include all the package's dependencies in the build"
       switch "--without-kegs",
-             description: "exclude contents at /usr/local/Cellar/packagename"
+             description: "Exclude contents at /usr/local/Cellar/packagename"
       switch "--without-opt",
-             description: "exclude the link in /usr/local/opt"
+             description: "Exclude the link in /usr/local/opt"
       flag "--install-location=",
-             description: "custom install location for package"
+             description: "Custom install location for package"
       flag "--custom-ownership",
-             description: "custom ownership for package"
+             description: "Custom ownership for package"
       flag "--preinstall-script=",
-             description: "custom preinstall script file"
+             description: "Custom preinstall script file"
       flag "--postinstall-script=",
-             description: "custom postinstall script file"
+             description: "Custom postinstall script file"
       flag "--scripts=",
-             description: "custom preinstall and postinstall scripts folder"
+             description: "Custom preinstall and postinstall scripts folder"
       flag "--pkgvers=",
-             description: "set the version string in the resulting .pkg file"
+             description: "Set the version string in the resulting .pkg file"
       switch :debug,
-             description: "print extra debug information"
+             description: "Print extra debug information"
       formula_options
       min_named :formula
     end
